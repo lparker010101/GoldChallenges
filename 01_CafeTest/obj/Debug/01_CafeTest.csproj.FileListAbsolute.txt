@@ -1,0 +1,16 @@
+C:\ElevenFiftyProjects\DotNetProjects\01_Cafe\01_CafeTest\obj\Debug\01_CafeTest.csprojAssemblyReference.cache
+C:\ElevenFiftyProjects\DotNetProjects\01_Cafe\01_CafeTest\obj\Debug\01_CafeTest.csproj.CoreCompileInputs.cache
+C:\ElevenFiftyProjects\DotNetProjects\01_Cafe\01_CafeTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\ElevenFiftyProjects\DotNetProjects\01_Cafe\01_CafeTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\ElevenFiftyProjects\DotNetProjects\01_Cafe\01_CafeTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\ElevenFiftyProjects\DotNetProjects\01_Cafe\01_CafeTest\bin\Debug\01_CafeTest.dll
+C:\ElevenFiftyProjects\DotNetProjects\01_Cafe\01_CafeTest\bin\Debug\01_CafeTest.pdb
+C:\ElevenFiftyProjects\DotNetProjects\01_Cafe\01_CafeTest\bin\Debug\01_Cafe.Library.dll
+C:\ElevenFiftyProjects\DotNetProjects\01_Cafe\01_CafeTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\ElevenFiftyProjects\DotNetProjects\01_Cafe\01_CafeTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\ElevenFiftyProjects\DotNetProjects\01_Cafe\01_CafeTest\bin\Debug\01_Cafe.Library.pdb
+C:\ElevenFiftyProjects\DotNetProjects\01_Cafe\01_CafeTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\ElevenFiftyProjects\DotNetProjects\01_Cafe\01_CafeTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\ElevenFiftyProjects\DotNetProjects\01_Cafe\01_CafeTest\obj\Debug\01_CafeTest.csproj.CopyComplete
+C:\ElevenFiftyProjects\DotNetProjects\01_Cafe\01_CafeTest\obj\Debug\01_CafeTest.dll
+C:\ElevenFiftyProjects\DotNetProjects\01_Cafe\01_CafeTest\obj\Debug\01_CafeTest.pdb

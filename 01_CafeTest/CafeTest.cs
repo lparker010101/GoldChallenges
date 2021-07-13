@@ -16,14 +16,13 @@ namespace _01_CafeTest
         {
             _CafeRepo = new CafeRepo();
             _cafe = new Cafe();
-            _repo.AddMenuItems(_cafe);
+            _CafeRepo.AddMenuItems(_cafe);
         }
 
         [TestMethod]
         public void SetMealName_ShouldSetCorrectString()
         {
             Cafe cafeMenu = new Cafe();
-
             cafeMenu.MealName = "1. Double Cheeseburger with Fries";
 
             string expected = "1. Double Cheeseburger with Fries";
@@ -58,9 +57,9 @@ namespace _01_CafeTest
         [TestMethod]
         public void removeMenuItem_ShouldReturnTrue()
         {
-            bool removeMenuItem = _repo.RemoveMenuItem(_cafe.MealName);
+            CafeRepo cafeRepo = new CafeRepo();
+            bool removeMenuItem = _CafeRepo.RemoveMenuItem(_cafe);
             Assert.IsTrue(removeMenuItem);
         }
-
     }
 }

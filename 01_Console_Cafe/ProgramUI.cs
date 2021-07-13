@@ -43,7 +43,7 @@ namespace _01_Console_Cafe
                         break;
                     case "2":
                         // Remove Menu Item
-                        RemoveMenuItem();
+                        RemoveMenuItemUI();
                         break;
                     case "3":
                         // Get a List of Menu Items
@@ -81,18 +81,14 @@ namespace _01_Console_Cafe
             string inputAsString3 = Console.ReadLine();
             newMenuItem.MealPrice = decimal.Parse(inputAsString3);
 
+         // Ingredients - Rework with while loop
             Console.WriteLine("What are the ingredients for this meal?");
             string inputAsString4 = Console.ReadLine();
-            Convert.ToString(inputAsString4);
-
-            foreach (Cafe menuItem1 in _listOfMenuItems)
-            {
-                Console.WriteLine("Ingredients: ");
-                Console.ReadLine();
-            }
+            newMenuItem.Ingredients.Add(inputAsString4);
+            _cafeRepo.AddMenuItems(newMenuItem);
         }
 
-        private void RemoveMenuItem()
+        private void RemoveMenuItemUI()
         {
             Console.WriteLine("What menu item do you want to remove?  Please enter a meal name.");
             string input = Console.ReadLine();
