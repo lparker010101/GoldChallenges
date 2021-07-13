@@ -10,6 +10,7 @@ namespace _01_Console_Cafe
     class ProgramUI
     {
         private CafeRepo _cafeRepo = new CafeRepo();
+        private List<Cafe> _listOfMenuItems = new List<Cafe>();
         public void Run()
         {
             CafeMenu();
@@ -63,6 +64,11 @@ namespace _01_Console_Cafe
         }
         private void CreateMenuItem()
         {
+            Console.WriteLine("What do you want the name of the meal to be?");
+            Console.ReadLine();
+
+
+
 
         }
 
@@ -73,7 +79,17 @@ namespace _01_Console_Cafe
 
         private void GetListOfMenuItems()
         {
+            Console.Clear();
+            List<Cafe> getListOfMenuItems = _cafeRepo.GetMenuItemsList();
 
+            foreach (Cafe menuItem in getListOfMenuItems)
+            {
+                Console.WriteLine($"Meal Number: {menuItem.MealNumber}\n" +
+                    $"Meal Name: {menuItem.MealName}\n" +
+                    $"Meal Description: {menuItem.MealDescription}\n" +
+                    $"Ingredients: {menuItem.Ingredients}\n" +
+                    $"Meal Price: {menuItem.MealPrice}");
+            }
         }
 
         //Seed Method
