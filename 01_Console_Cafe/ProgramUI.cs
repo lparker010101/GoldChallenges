@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _01_Cafe.Library;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,11 @@ namespace _01_Console_Cafe
 {
     class ProgramUI
     {
+        private CafeRepo _cafeRepo = new CafeRepo();
         public void Run()
         {
             CafeMenu();
+            SeedMenuList();
         }
 
         private void CafeMenu()
@@ -18,51 +21,68 @@ namespace _01_Console_Cafe
             bool keepRunning = true;
             while (keepRunning)
             {
+                //Display our options to the user
+                Console.WriteLine("Select a menu option:\n" +
+                    "1. Create New Menu Items:\n" +
+                    "2. Remove Menu Item:\n" +
+                    "3. Get a List of Menu Items:\n" +
+                    "4. Exit Application");
 
-                //Display options to the user
-                Console.WriteLine("Select a meal number.  Meal Number:\n" +
-                    "1. Select 1 for meal number 1. \n" +
-                    "2. Select 2 for meal number 2. \n" +
-                    "3. Select 3 for meal number 3. \n" +
-                    "4. Select 4 for meal number 4. \n" +
-                    "5. Select 5 for meal number 5.\n" +
-                    "6. Exit");
-                int input = int.Parse(Console.ReadLine());
+                // Get the user's input
+                string input = Console.ReadLine();
 
-                //Determine if menu option was selected and act accordingly.
+                // Evaluate the user's input
 
+                switch (input)
                 {
-                    switch (input)
-                    {
-                        case 1:
-                            Console.WriteLine("You just ordered #1. Great choice!");
-                            break;
-                        case 2:
-                            Console.WriteLine("You just ordered #2.  Enjoy!");
-                            break;
-                        case 3:
-                            Console.WriteLine("You just ordered #3.  Bon appetite.");
-                            break;
-                        case 4:
-                            Console.WriteLine("You just ordered #4.  Yum!");
-                            break;
-                        case 5:
-                            Console.WriteLine("You just ordered #5.  Wonderful choice!");
-                            break;
-                        case 6:
-                            //Exit
-                            keepRunning = false;
-                            Console.WriteLine("Thank you for enjoying a meal with us today.  Please come and see us again soon.");
-                            break;
-                        default:
-                            Console.WriteLine("Please enter a valid meal number. Options: 1, 2, 3, 4, 5");
-                            break;
-                    }
-                    Console.WriteLine("Press any key to continue...");
-                    Console.ReadKey();
-                    Console.Clear();
+                    case "1":
+                        // Create New Menu Item
+                        CreateMenuItem();
+                        break;
+                    case "2":
+                        // Remove Menu Item
+                        RemoveMenuItem();
+                        break;
+                    case "3":
+                        // Get a List of Menu Items
+                        GetListOfMenuItems();
+                        break;
+                    case "4":
+                        // Exit Application
+                        Console.WriteLine("Goodbye.  Have a nice day!");
+                        keepRunning = false;
+                        break;
+                    default:
+                        Console.WriteLine("You entered an invalid number.  Please enter 1, 2, 3, 4.");
+                        break;
                 }
+                Console.WriteLine("Please press any key to continue...");
+                Console.ReadLine();
+                Console.Clear();
             }
+        }
+        private void CreateMenuItem()
+        {
+
+        }
+
+        private void RemoveMenuItem()
+        {
+
+        }
+
+        private void GetListOfMenuItems()
+        {
+
+        }
+
+        //Seed Method
+        private void SeedMenuList()
+        {
+            Cafe cafeMenu1 = new Cafe(1, "Cheeseburger", "Our cheeseburger is made from 80% grass fed ground beef.", new List<string>() {"Bread","Beef","Cheese", "Lettuce", "Tomato"}, 3.59m);
+            Cafe cafeMenu5 = new Cafe(5, "Chicken Sandwich", "Our chicken sandwich is a boneless chicken breast.", new List<string>() { "Bread", "Chicken", "Lettuce" }, 4.29m);
+
+            _cafeRepo.AddMenuItems(cafeMenu5);
         }
     }
 }
