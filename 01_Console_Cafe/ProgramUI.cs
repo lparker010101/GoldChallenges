@@ -11,6 +11,7 @@ namespace _01_Console_Cafe
     {
         private CafeRepo _cafeRepo = new CafeRepo();
         private List<Cafe> _listOfMenuItems = new List<Cafe>();
+
         public void Run()
         {
             CafeMenu();
@@ -64,17 +65,41 @@ namespace _01_Console_Cafe
         }
         private void CreateMenuItem()
         {
-            Console.WriteLine("What do you want the name of the meal to be?");
-            Console.ReadLine();
+            Cafe newMenuItem = new Cafe();
 
+            Console.WriteLine("Enter a meal number.");
+            string inputAsString = Console.ReadLine();
+            newMenuItem.MealNumber = int.Parse(inputAsString);
 
+            Console.WriteLine("Enter a meal name.");
+            newMenuItem.MealName = Console.ReadLine();
 
+            Console.WriteLine("Enter information about the meal.");
+            newMenuItem.MealDescription = Console.ReadLine();
 
+            Console.WriteLine("Enter the price of the meal.");
+            string inputAsString3 = Console.ReadLine();
+            newMenuItem.MealPrice = decimal.Parse(inputAsString3);
+
+            Console.WriteLine("What are the ingredients for this meal?");
+            string inputAsString4 = Console.ReadLine();
+            Convert.ToString(inputAsString4);
+
+            foreach (Cafe menuItem1 in _listOfMenuItems)
+            {
+                Console.WriteLine("Ingredients: ");
+                Console.ReadLine();
+            }
         }
 
         private void RemoveMenuItem()
         {
+            Console.WriteLine("What menu item do you want to remove?  Please enter a meal name.");
+            string input = Console.ReadLine();
 
+            Cafe meal = _cafeRepo.GetMenuItemByMealName(input);
+
+            _cafeRepo.RemoveMenuItem(meal);
         }
 
         private void GetListOfMenuItems()
