@@ -8,5 +8,10 @@ namespace _03_Console_Badges
 {
     class ProgramUI
     {
+        public void Run()
+        {
+
+        }
+        
     }
 }

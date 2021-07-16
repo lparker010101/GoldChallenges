@@ -9,14 +9,14 @@ namespace _01_CafeTest
     {
         private Cafe _cafe;
         private CafeRepo _repo;
-        private CafeRepo _CafeRepo;
+        private CafeRepo _cafeRepo;
 
         [TestInitialize]
         public void Arrange()
         {
-            _CafeRepo = new CafeRepo();
+            _cafeRepo = new CafeRepo();
             _cafe = new Cafe();
-            _CafeRepo.AddMenuItems(_cafe);
+            _cafeRepo.AddMenuItems(_cafe);
         }
 
         [TestMethod]
@@ -51,14 +51,14 @@ namespace _01_CafeTest
         public void ReadMenuList()
         {
             Cafe menu = new Cafe();
-            _CafeRepo.GetMenuItemsList();
+            _cafeRepo.GetMenuItemsList();
         }
 
         [TestMethod]
         public void removeMenuItem_ShouldReturnTrue()
         {
             CafeRepo cafeRepo = new CafeRepo();
-            bool removeMenuItem = _CafeRepo.RemoveMenuItem(_cafe);
+            bool removeMenuItem = _cafeRepo.RemoveMenuItem(_cafe);
             Assert.IsTrue(removeMenuItem);
         }
     }

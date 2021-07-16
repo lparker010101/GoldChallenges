@@ -10,6 +10,8 @@ namespace _03_Console_Badges
     {
         static void Main(string[] args)
         {
+            ProgramUI programUI = new ProgramUI();
+            programUI.Run();
         }
     }
 }
