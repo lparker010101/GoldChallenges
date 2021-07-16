@@ -28,14 +28,33 @@ namespace _03_Badges.Library
             return _dictionaryOfIDAndDoors;
         }
 
-        private void UpdateDoorsForBadge()
+        private bool UpdateDoorsForBadge(int badgeID, Badges badges)
         {
+            // Find the Badge ID Number
+            Badges existingBadgeID = GetBadgeID(badgeID);
             
+            // Update the Content 
+            if (existingBadgeID != null)
+            {
+                existingBadgeID.DoorNames = badges.DoorNames;
+                return true;                       
+            }
+            else
+            {
+                return false;
+            }
         }
 
-        private void DeleteAllDoorsFromBadge()
+        public bool DeleteAllDoorsFromBadge(Badges badgeID)
         {
-
+            if (badgeID == null)
+            {
+                return false;
+            }
+            else
+            {
+                return _dictionaryOfIDAndDoors.Remove(badges.DoorNames);
+            }
         }
 
         //Helper Method
