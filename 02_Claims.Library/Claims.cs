@@ -28,9 +28,5 @@ namespace _02_Claims.Library
             DateOfClaim = DateOfClaim;
             IsValid = isValid;
         }
-
-            
-
-
     }
 }

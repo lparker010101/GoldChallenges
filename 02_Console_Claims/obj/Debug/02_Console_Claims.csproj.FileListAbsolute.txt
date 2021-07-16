@@ -1,0 +1,10 @@
+C:\ElevenFiftyProjects\DotNetProjects\01_Cafe\02_Console_Claims\bin\Debug\02_Console_Claims.exe.config
+C:\ElevenFiftyProjects\DotNetProjects\01_Cafe\02_Console_Claims\bin\Debug\02_Console_Claims.exe
+C:\ElevenFiftyProjects\DotNetProjects\01_Cafe\02_Console_Claims\bin\Debug\02_Console_Claims.pdb
+C:\ElevenFiftyProjects\DotNetProjects\01_Cafe\02_Console_Claims\bin\Debug\02_Claims.Library.dll
+C:\ElevenFiftyProjects\DotNetProjects\01_Cafe\02_Console_Claims\bin\Debug\02_Claims.Library.pdb
+C:\ElevenFiftyProjects\DotNetProjects\01_Cafe\02_Console_Claims\obj\Debug\02_Console_Claims.csprojAssemblyReference.cache
+C:\ElevenFiftyProjects\DotNetProjects\01_Cafe\02_Console_Claims\obj\Debug\02_Console_Claims.csproj.CoreCompileInputs.cache
+C:\ElevenFiftyProjects\DotNetProjects\01_Cafe\02_Console_Claims\obj\Debug\02_Console_Claims.csproj.CopyComplete
+C:\ElevenFiftyProjects\DotNetProjects\01_Cafe\02_Console_Claims\obj\Debug\02_Console_Claims.exe
+C:\ElevenFiftyProjects\DotNetProjects\01_Cafe\02_Console_Claims\obj\Debug\02_Console_Claims.pdb

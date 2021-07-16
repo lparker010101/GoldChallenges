@@ -26,10 +26,10 @@ namespace _02_Console_Claims
             while (keepRunning)
             {
                 //Display our options to the user.
-                Console.WriteLine("Select a menu option:\n +" +
-                    "1. Add a claim" +
-                    "2. See all claims" +
-                    "3. Take care of next claim" +
+                Console.WriteLine("Select a menu option:\n" +
+                    "1. Add a claim:\n" +
+                    "2. See all claims:\n" +
+                    "3. Take care of next claim:\n" +
                     "4. Exit Application");
 
                 //Get the user's input
@@ -79,7 +79,7 @@ namespace _02_Console_Claims
             Console.WriteLine("Enter details about the claim.  Some examples: Car accident on 465, House fire in kitchen, Stolen pancakes");
             newClaim.Description = Console.ReadLine();
 
-            Console.WriteLine("Enter the cost amount of the claim.  Enter the amount without using a $ sign.  Example: If it is $400, enter 400.");
+            Console.WriteLine("Enter the cost amount of the claim.  Enter the amount without using a $ sign and commas.  Example: If it is $400, enter 400.  If is is $12,000, enter 12,000.");
             string inputAsString1 = Console.ReadLine();
             newClaim.ClaimAmount = int.Parse(inputAsString1);
 
@@ -91,11 +91,13 @@ namespace _02_Console_Claims
             string inputAsString3 = Console.ReadLine();
             newClaim.DateOfClaim = DateTime.Parse(inputAsString3);
 
-            Console.WriteLine("Was the claim made within 30 days after an incident took place.  Enter yes or no.");
-            string inputAsString4 = Console.ReadLine();
-            newClaim.IsValid = Boolean.Parse(inputAsString4);
-            _claimsRepo.AddClaims(newClaim);
-        }
+            if ((newClaim.DateOfClaim - newClaim.DateOfIncident).TotalDays <= 30  == true)
+            {
+                _claimsRepo.AddClaims(newClaim);
+            }
+
+            Console.ReadLine();
+        }        
 
         private void DisplayClaims()
         {
