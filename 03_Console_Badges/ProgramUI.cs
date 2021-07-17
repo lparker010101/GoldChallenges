@@ -69,7 +69,6 @@ namespace _03_Console_Badges
                 Console.Clear();
             }
         }
-        
         private void CreateBadge()
         {
             Badges newBadge = new Badges();
@@ -77,8 +76,12 @@ namespace _03_Console_Badges
             Console.WriteLine("What is the number on the badge?");
 
             Console.WriteLine("List a door that it needs access to: ");
+            Console.WriteLine("Any other doors(y/n?");
 
-            Console.WriteLine();
+            Console.WriteLine("List a door that it needs acct to?");
+            Console.WriteLine("Any other doors(y/n)?");
+
+            // (Return to the main menu.)
 
     }
 
