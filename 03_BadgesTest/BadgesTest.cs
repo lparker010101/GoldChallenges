@@ -17,34 +17,47 @@ namespace _03_BadgesTest
         {
             _badges = new Badges();
             _badgesRepo = new BadgesRepo();
-            _badgesRepo.AddBadgeToDictionary(_badges);
+            _badgesRepo.AddBadgesAndDoorsToDictionary(_badges);
         }
 
         [TestMethod]
-        public void AddBadgeToDictionaryTest()
+        // Test: Create a new badge.
+        public void AddBadgesAndDoorsToDictionaryTest()
         {
+            // Arrange --> Setting Up
+            Badges badgeID = new Badges();
+            badgeID.BadgeID = 12345;
 
+            int expected = 12345;
+            int actual = badgeID.BadgeID;
+
+            Assert.AreEqual(expected, actual);
         }
 
+
         [TestMethod]
+        // Test: Create a dictionary of badgeID and door names.
         public void CreateDictionaryOfIDAndDoorListTest()
         {
 
         }
 
         [TestMethod]
+        // Test: Show a list with all badge numbers and door access.
         public void GetDictionaryOfIDAndDoorListTest()
         {
 
         }
 
         [TestMethod]
+        // Test: Update doors on an existing badge.
         public void UpdateDoorsForBadgeTest()
         {
 
         }
 
         [TestMethod]
+        // Test: Delete all doors from an existing badge.
         public void DeleteAllDoorsFromBadgeTest()
         {
 
