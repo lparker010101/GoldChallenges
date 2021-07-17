@@ -45,16 +45,19 @@ namespace _03_Badges.Library
             }
         }
 
-        public bool DeleteAllDoorsFromBadge(Badges badgeID)
+        public bool DeleteAllDoorsFromBadge(int badgeID) // Grab an object from list in the database. (int)
         {
-            if (badgeID == null)
+            Badges badges = GetBadgeID(badgeID);
+
+            if (badges == null)
             {
                 return false;
             }
             else
             {
-                return _dictionaryOfIDAndDoors.Remove(badges.DoorNames);
+                badges.DoorNames.Clear();
             }
+            return false;
         }
 
         //Helper Method

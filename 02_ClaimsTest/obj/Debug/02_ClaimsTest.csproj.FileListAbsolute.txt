@@ -1,0 +1,2 @@
+C:\ElevenFiftyProjects\DotNetProjects\01_Cafe\02_ClaimsTest\obj\Debug\02_ClaimsTest.csprojAssemblyReference.cache
+C:\ElevenFiftyProjects\DotNetProjects\01_Cafe\02_ClaimsTest\obj\Debug\02_ClaimsTest.csproj.CoreCompileInputs.cache

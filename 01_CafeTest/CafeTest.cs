@@ -8,7 +8,6 @@ namespace _01_CafeTest
     public class CafeTest
     {
         private Cafe _cafe;
-        private CafeRepo _repo;
         private CafeRepo _cafeRepo;
 
         [TestInitialize]
@@ -55,7 +54,7 @@ namespace _01_CafeTest
         }
 
         [TestMethod]
-        public void removeMenuItem_ShouldReturnTrue()
+        public void RemoveMenuItem_ShouldReturnTrue()
         {
             CafeRepo cafeRepo = new CafeRepo();
             bool removeMenuItem = _cafeRepo.RemoveMenuItem(_cafe);

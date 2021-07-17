@@ -8,7 +8,7 @@ namespace _02_Claims.Library
 {
     public class ClaimsRepo
     {
-        Queue<Claims> _queueOfClaims = new Queue<Claims>();
+        public Queue<Claims> _queueOfClaims = new Queue<Claims>();
 
         // Create Queue of Claims
         public void AddClaims(Claims claims)
