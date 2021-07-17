@@ -1,6 +1,7 @@
 ﻿using _03_Badges.Library;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
+using System.Collections.Generic;
 
 namespace _03_BadgesTest
 {
@@ -10,19 +11,19 @@ namespace _03_BadgesTest
 
         public Badges _badges;
         public BadgesRepo _badgesRepo;
-        
+
 
         [TestInitialize]
         public void Arrange()
         {
             _badges = new Badges();
             _badgesRepo = new BadgesRepo();
-            _badgesRepo.AddBadgesAndDoorsToDictionary(_badges);
+            _badgesRepo.AddBadgeToDictionary(_badges);
         }
 
         [TestMethod]
         // Test: Create a new badge.
-        public void AddBadgesAndDoorsToDictionaryTest()
+        public void AddBadgesToDictionaryTest()
         {
             // Arrange --> Setting Up
             Badges badgeID = new Badges();
@@ -34,33 +35,16 @@ namespace _03_BadgesTest
             Assert.AreEqual(expected, actual);
         }
 
-
-        [TestMethod]
-        // Test: Create a dictionary of badgeID and door names.
-        public void CreateDictionaryOfIDAndDoorListTest()
-        {
-
-        }
-
         [TestMethod]
         // Test: Show a list with all badge numbers and door access.
         public void GetDictionaryOfIDAndDoorListTest()
         {
+            Dictionary<int, List<string>> BadgesAndDoorAccess = _badgesRepo.GetDictionaryOfIDAndDoorList(); // Call a Method: Type, Name, = Value, ()
+            Badges badges = new Badges();
+            _badgesRepo.GetDictionaryOfIDAndDoorList();
 
-        }
-
-        [TestMethod]
-        // Test: Update doors on an existing badge.
-        public void UpdateDoorsForBadgeTest()
-        {
-
-        }
-
-        [TestMethod]
-        // Test: Delete all doors from an existing badge.
-        public void DeleteAllDoorsFromBadgeTest()
-        {
-
+            Assert.IsNotNull(BadgesAndDoorAccess);
         }
     }
 }
+

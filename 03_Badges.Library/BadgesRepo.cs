@@ -11,7 +11,7 @@ namespace _03_Badges.Library
         Badges badges = new Badges();
         Dictionary<int, List<string>> _dictionaryOfIDAndDoors = new Dictionary<int, List<string>>();  // Lookups
 
-        public void AddBadgesAndDoorsToDictionary(Badges badges)
+        public void AddBadgeToDictionary(Badges badges)
         {
             _dictionaryOfIDAndDoors.Add(badges.BadgeID, badges.DoorNames);
         }
