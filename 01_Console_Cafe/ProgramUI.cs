@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace _01_Console_Cafe
 {
-    class ProgramUI
+    public class ProgramUI
     {
         private CafeRepo _cafeRepo = new CafeRepo();
         private List<Cafe> _listOfMenuItems = new List<Cafe>();

@@ -1,4 +1,5 @@
-﻿using _03_Badges.Library;
+﻿using _02_Claims.Library;
+using _03_Badges.Library;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,14 +10,13 @@ namespace _03_Console_Badges
 {
     public class ProgramUI
     {
-        private BadgesRepo _badgesRepo = new BadgesRepo();
+        public BadgesRepo _badgesRepo = new BadgesRepo();
         public List<Badges> _listOfBadges = new List<Badges>();
         Dictionary<int, List<string>> _dictionaryOfIDAndDoors = new Dictionary<int, List<string>>();
 
         public void Run()
         {
             Badges();
-            SeedBadges();
         }
 
         private void Badges()
@@ -36,7 +36,6 @@ namespace _03_Console_Badges
                 string input = Console.ReadLine();
 
                 // Evaluate the user's input
-
                 switch (input)
                 {
                     case "1":
@@ -48,14 +47,10 @@ namespace _03_Console_Badges
                         UpdateDoorsOnBadge();
                         break;
                     case "3":
-                        // Delete All Doors from an Existing Badge
-                        DeleteAllDoorsFromBadge();
-                        break;
-                    case "4":
                         // Display a List of All Badge Numbers and Door Access
                         SeeListOfAllBadgeNumbersAndDoorAccess();
                         break;
-                    case "5":
+                    case "4":
                         // Exit Application
                         Console.WriteLine("Goodbye.");
                         keepRunning = false;
@@ -74,35 +69,74 @@ namespace _03_Console_Badges
             Badges newBadge = new Badges();
 
             Console.WriteLine("What is the number on the badge?");
+            string inputAsString = Console.ReadLine();
+            newBadge.BadgeID = int.Parse(inputAsString);
 
             Console.WriteLine("List a door that it needs access to: ");
+            string inputAsString2 = Console.ReadLine();
+            newBadge.DoorNames = List<Badges>(inputAsString2);
+
             Console.WriteLine("Any other doors(y/n?");
+            string input2 = Console.ReadLine();
 
-            Console.WriteLine("List a door that it needs acct to?");
+
+            Console.WriteLine("List a door that it needs access to?");
+            string inputAsString3 = Console.ReadLine();
+            newBadge.DoorNames = List<Badges>(inputAsString3);
+
             Console.WriteLine("Any other doors(y/n)?");
+            string input3 = Console.ReadLine();
 
-            // (Return to the main menu.)
+            if (input3 == "y")
+            {
+                Console.WriteLine("List a door that it needs access to?");
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("Press M to go back to the main menu.");
+                string input4 = Console.ReadLine();
 
-    }
-
-    private void UpdateDoorsOnBadge()
-        {
-
+                if (input4 == "M")
+                {
+                    Badges();  // (Return to the main menu.)
+                }
+            }
         }
-
-        private void DeleteAllDoorsFromBadge()
+        private void UpdateDoorsOnBadge()
         {
+            Badges badgeID2 = new Badges();
+            Console.WriteLine("What is the badge number to update?");
+            string inputAsString = Console.ReadLine();
+            badgeID2.BadgeID = int.Parse(inputAsString);
 
+            Console.WriteLine("12345 has access to doors A5 & A7.  What would you like to do?  1. Remove a door 2. Add a door.");
+            string inputAsString2 = Console.ReadLine();
+            badgeID2.DoorNames = int.Parse(inputAsString2);
+
+            if (inputAsString2 = 1)
+            {
+                badgeID2.DoorNames.Remove(inputAsString2);
+            }
+            else
+            {
+                badgeID2.DoorNames.Add(inputAsString2);
+            }
+
+            Console.WriteLine("Which door would you like to remove?");
+            string inputAsString3 = Console.ReadLine();
+            badgeID2.DoorNames.Remove() = int.Parse(inputAsString3);
+
+            Console.WriteLine("Door removed.");
+            Console.WriteLine("12345 has access to door A7.");
         }
 
         private void SeeListOfAllBadgeNumbersAndDoorAccess()
         {
-
-        }
-
-        private void SeedBadges()
-        {
-
+            Console.Clear();
+            Dictionary<int, List<string>> _dictionaryOfIDAndDoors = new Dictionary<int, List<string>>();
+            Dictionary<BadgeID, DoorNames> seeBadgesAndDoorNames = _badgesRepo.GetDictionaryOfIDAndDoorList(){
+            }
         }
     }
 }

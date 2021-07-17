@@ -28,7 +28,7 @@ namespace _03_Badges.Library
             return _dictionaryOfIDAndDoors;
         }
 
-        private bool UpdateDoorsForBadge(int badgeID, Badges badges)
+        public bool UpdateDoorsForBadge(int badgeID, Badges badges)
         {
             // Find the Badge ID Number
             Badges existingBadgeID = GetBadgeID(badgeID);

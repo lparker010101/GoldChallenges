@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace _02_Console_Claims
 {
-    class ProgramUI
+    public class ProgramUI
     {
 
         private ClaimsRepo _claimsRepo = new ClaimsRepo();

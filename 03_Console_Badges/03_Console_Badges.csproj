@@ -51,6 +51,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\02_Claims.Library\02_Claims.Library.csproj">
+      <Project>{82C28EAC-E152-4AB5-BAD0-7B84E472D800}</Project>
+      <Name>02_Claims.Library</Name>
+    </ProjectReference>
     <ProjectReference Include="..\03_Badges.Library\03_Badges.Library.csproj">
       <Project>{87FFEA09-C71B-4A2B-B614-3DA67F0E8A24}</Project>
       <Name>03_Badges.Library</Name>
