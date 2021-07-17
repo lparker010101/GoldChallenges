@@ -7,19 +7,45 @@ namespace _03_BadgesTest
     [TestClass]
     public class BadgesTest
     {
-        private BadgesTest _badges;
-        private BadgesRepo _badgesRepo;
+
+        public Badges _badges;
+        public BadgesRepo _badgesRepo;
+        
 
         [TestInitialize]
         public void Arrange()
         {
-            Badges _badges = new Badges();
-            Badges _badgesRepo = new Badges();
-            _badgesRepo.
+            _badges = new Badges();
+            _badgesRepo = new BadgesRepo();
+            _badgesRepo.AddBadgeToDictionary(_badges);
         }
 
         [TestMethod]
-        public void DeleteAllDoorsFromBadge()
+        public void AddBadgeToDictionaryTest()
+        {
+
+        }
+
+        [TestMethod]
+        public void CreateDictionaryOfIDAndDoorListTest()
+        {
+
+        }
+
+        [TestMethod]
+        public void GetDictionaryOfIDAndDoorListTest()
+        {
+
+        }
+
+        [TestMethod]
+        public void UpdateDoorsForBadgeTest()
+        {
+
+        }
+
+        [TestMethod]
+        public void DeleteAllDoorsFromBadgeTest()
         {
 
         }

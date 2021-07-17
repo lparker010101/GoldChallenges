@@ -9,12 +9,11 @@ namespace _03_Badges.Library
     public class BadgesRepo
     {
         Badges badges = new Badges();
-        public List<Badges> _listOfBadges = new List<Badges>();
         Dictionary<int, List<string>> _dictionaryOfIDAndDoors = new Dictionary<int, List<string>>();  // Lookups
 
-        public void AddBadgeToList(Badges badges)
+        public void AddBadgeToDictionary(Badges badges)
         {
-            _listOfBadges.Add(badges);
+            _dictionaryOfIDAndDoors.Add(badges.BadgeID, badges.DoorNames);
         }
 
         public void CreateDictionaryOfIDAndDoorList()
@@ -63,14 +62,15 @@ namespace _03_Badges.Library
         //Helper Method
         public Badges GetBadgeID(int badgeID)
         {
-            foreach (Badges badge in _listOfBadges)
+            /*foreach (Badges badge in _listOfBadges)
             {
                 if (badges.BadgeID == badgeID)
                 {
                     return badge;
                 }
-            }
+            }*/
             return null;
+
         }
     }
 }
