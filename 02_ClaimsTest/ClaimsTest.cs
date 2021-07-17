@@ -25,7 +25,6 @@ namespace _02_ClaimsTest
             // Arrange --> Setting up
             Claims addClaim = new Claims(14444, "House", "House on Fire", 6000.00m, new DateTime(01 / 03 / 2003), new DateTime(04 / 31 / 2003), false);
 
-
             // Act --> Get/run the code needed to test
             _claimsRepo.AddClaims(addClaim);
             int newCount = _claimsRepo._queueOfClaims.Count;
